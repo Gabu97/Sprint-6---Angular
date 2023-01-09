@@ -1,0 +1,15 @@
+
+<div 
+class="imgBackground" 
+style="background-image: url(../../assets/img/fondo.jpg);"
+  [ngClass]="buttonName == 'Start' ? 'hello' : 'escena'"
+>
+  <div class="row w-50 mx-auto my-auto top-50" *ngIf="!hero">
+    <p class="text-center p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum maiores soluta laborum, fuga illo incidunt quisquam debitis cupiditate veritatis necessitatibus nobis adipisci quibusdam magni vitae quia, dicta minus autem iusto?</p>
+    <button class="button_slide slide_left" (click)="toggle()">{{ buttonName }}</button>
+  </div>
+
+  <div *ngIf="showEscena">
+    <app-escena [parentData]="TextVisible"> </app-escena>
+  </div>
+</div>
